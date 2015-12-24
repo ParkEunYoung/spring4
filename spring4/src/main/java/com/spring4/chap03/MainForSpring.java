@@ -40,14 +40,14 @@ public class MainForSpring {
 				processChangeCommand(command.split(" "));
 				//change abc@abc.com 123 1234
 				continue;
-			}else if(command.startsWith("list")){
+			}else if(command.equals("list")){
 				processListCommand();
 				//new korea@korea.com pey 1234 1234
 				continue;
 			}else if(command.startsWith("info")){
 				processInfoCommand(command.split(" "));
 				continue;
-			}else if(command.startsWith("version")){
+			}else if(command.equals("version")){
 				processVersionCommand();
 				continue;
 			}
