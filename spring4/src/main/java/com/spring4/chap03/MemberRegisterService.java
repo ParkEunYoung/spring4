@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class MemberRegisterService {
 	
-	private MemberDao memberDao = new MemberDao();
+	private MemberDao memberDao;
 
 	public MemberRegisterService(MemberDao memberDao) {
 		this.memberDao = memberDao;
