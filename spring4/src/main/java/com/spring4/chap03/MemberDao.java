@@ -23,6 +23,7 @@ public class MemberDao {
 		map.put(member.getEmail(), member);
 	}
 	
+	//생성자에 전달할 의존 객체가 두 개 이상일 경우
 	public Collection<Member> selectAll(){
 		return map.values();
 	}

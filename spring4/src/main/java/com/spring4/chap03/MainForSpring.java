@@ -13,15 +13,15 @@ public class MainForSpring {
 
 	public static void main(String[] args) throws IOException{
 		
-//		ctx = new GenericXmlApplicationContext("classpath:appCtx.xml");
+		ctx = new GenericXmlApplicationContext("classpath:appCtx.xml");
 		
 //		1. 두개의 xml을 사용할 경우
 //		String[] conf={"classpath:conf1.xml", "classpath:conf2.xml"};
 //		ctx = new GenericXmlApplicationContext(conf);
 		
 //		2.<import> 태그를 사용할 경우
-		String[] conf={"classpath:configImport.xml"};
-		ctx = new GenericXmlApplicationContext(conf);
+//		String[] conf={"classpath:configImport.xml"};
+//		ctx = new GenericXmlApplicationContext(conf);
 
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		
@@ -46,6 +46,7 @@ public class MainForSpring {
 				continue;
 			}else if(command.startsWith("info")){
 				processInfoCommand(command.split(" "));
+				//info abc@abc.com
 				continue;
 			}else if(command.equals("version")){
 				processVersionCommand();
@@ -55,7 +56,7 @@ public class MainForSpring {
 		}
 	}
 
-	private static Assembler assembler = new Assembler();
+//	private static Assembler assembler = new Assembler();
 
 	private static void processNewCommand(String[] args){
 		
@@ -65,7 +66,7 @@ public class MainForSpring {
 		}
 		
 //		MemberRegisterService regSvc = assembler.getMemberRegisterService();
-		MemberRegisterService regSvc = ctx.getBean("memberRegSvc",MemberRegisterService.class);
+		MemberRegisterService regSvc = ctx.getBean("memberRegSvc", MemberRegisterService.class);
 		
 		RegisterRequest req = new RegisterRequest();
 		req.setEmail(args[1]);
@@ -92,7 +93,7 @@ public class MainForSpring {
 		}
 
 //		ChangePasswordService changePwdSvc = assembler.getChangePasswordService();//
-		ChangePasswordService changePwdSvc = ctx.getBean("changePwdSvc",ChangePasswordService.class);
+		ChangePasswordService changePwdSvc = ctx.getBean("changePwdSvc", ChangePasswordService.class);
 
 		try {
 			changePwdSvc.changePassword(args[1], args[2], args[3]);
@@ -115,7 +116,7 @@ public class MainForSpring {
 	}
 	
 	private static void processListCommand(){
-		MemberListPrinter listPrinter = ctx.getBean("listPrinter",MemberListPrinter.class);
+		MemberListPrinter listPrinter = ctx.getBean("listPrinter", MemberListPrinter.class);
 		listPrinter.printAll();
 	}
 	
