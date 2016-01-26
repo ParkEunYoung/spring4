@@ -1,10 +1,11 @@
 package com.spring4.chap04;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class MemberInfoPrinter {
 	
-	@Autowired
+	@Autowired (required=false)
 	private MemberDao memDao;
 	private MemberPrinter printer;
 	

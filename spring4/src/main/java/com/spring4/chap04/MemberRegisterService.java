@@ -8,7 +8,7 @@ public class MemberRegisterService {
 	
 	private MemberDao memberDao;
 
-	@Autowired
+	@Autowired (required = false)
 	public MemberRegisterService(MemberDao memberDao) {
 		this.memberDao = memberDao;
 	}
