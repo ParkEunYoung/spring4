@@ -8,7 +8,7 @@ public class Main2 {
 	public static void main(String[] args){
 		
 		ApplicationContext ctx = new GenericXmlApplicationContext("classpath:appCtx2.xml");
-		MemberRegisterService regSvc = ctx.getBean("memberRegSvc", MemberRegisterService.class);
+//		MemberRegisterService regSvc = ctx.getBean("memberRegSvc", MemberRegisterService.class);
 		MemberInfoPrinter infoPrinter = ctx.getBean("infoPrinter", MemberInfoPrinter.class);
 		
 		RegisterRequest regReq = new RegisterRequest();
@@ -16,8 +16,8 @@ public class Main2 {
 		regReq.setName("eypark");
 		regReq.setPassword("1234");
 		regReq.setConfirmPassword("1234");
-		regSvc.regist(regReq);
+//		regSvc.regist(regReq);
 		
-		infoPrinter.printMemberInfo("abc@abc.com");
+//		infoPrinter.printMemberInfo("abc@abc.com");
 	}
 }

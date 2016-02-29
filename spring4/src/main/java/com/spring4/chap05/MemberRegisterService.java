@@ -1,4 +1,4 @@
-package com.spring4.chap04;
+package com.spring4.chap05;
 
 import java.util.Date;
 
@@ -8,8 +8,8 @@ public class MemberRegisterService {
 	
 	private MemberDao memberDao;
 
-	@Autowired //(required = false)
 	public MemberRegisterService(MemberDao memberDao) {
+		System.out.println("MemberRegisterService 주입 : " + memberDao);
 		this.memberDao = memberDao;
 	}
 	
