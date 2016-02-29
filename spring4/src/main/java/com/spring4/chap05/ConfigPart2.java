@@ -6,9 +6,9 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ConfigPart2 {
+	
 	@Autowired
 	private MemberDao memberDao;
-	
 //	@Autowired
 //	private ConfigPart1 configPart1;
 	
