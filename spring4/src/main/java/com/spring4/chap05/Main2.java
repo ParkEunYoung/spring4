@@ -17,6 +17,6 @@ public class Main2 {
 		regReq.setConfirmPassword("1234");
 		regSvc.regist(regReq);
 		
-		infoPrinter.printMemberInfo("madvierus@madvirus.net");
+		infoPrinter.printMemberInfo("madvirus@madvirus.net");
 	}
 }
