@@ -9,7 +9,6 @@ public class MemberInfoPrinter {
 	
 	@Autowired
 	public void setMemberDao(MemberDao memberDao) {
-		System.out.println("MemberInfoPrinter 주입 : " + memberDao);
 		this.memDao = memberDao;
 	}
 	
@@ -25,6 +24,5 @@ public class MemberInfoPrinter {
 			return;
 		}
 		printer.print(member);
-		System.out.println();
 	}
 }

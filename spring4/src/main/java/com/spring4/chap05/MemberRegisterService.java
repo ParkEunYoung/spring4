@@ -9,7 +9,6 @@ public class MemberRegisterService {
 	private MemberDao memberDao;
 
 	public MemberRegisterService(MemberDao memberDao) {
-		System.out.println("MemberRegisterService 주입 : " + memberDao);
 		this.memberDao = memberDao;
 	}
 	
