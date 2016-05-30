@@ -1,4 +1,4 @@
-package com.spring4.chao07;
+package com.spring4.chap07;
 
 public class MainProxy {
 	public static void main(String[] args){
