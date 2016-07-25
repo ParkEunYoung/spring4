@@ -23,7 +23,6 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		
 		ctx = new GenericXmlApplicationContext("classpath:appCtx8.xml");
-		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		
 		while(true){
@@ -35,19 +34,15 @@ public class Main {
 			}
 			if(command.startsWith("new")){
 				processNewCommand(command.split(" "));
-				//new abc@abc.com 박은영 123 123
 				continue;
 			}else if(command.startsWith("change")){
 				processChangeCommand(command.split(" "));
-				//change abc@abc.com 123 1234
 				continue;
 			}else if(command.equals("list")){
 				processListCommand();
-				//new korea@korea.com pey 1234 1234
 				continue;
 			}else if(command.startsWith("info")){
 				processInfoCommand(command.split(" "));
-				//info abc@abc.com
 				continue;
 			}else if(command.equals("version")){
 				processVersionCommand();
@@ -56,7 +51,6 @@ public class Main {
 			printHelp();
 		}
 	}
-
 
 	private static void processNewCommand(String[] args){
 		if(args.length != 5){
